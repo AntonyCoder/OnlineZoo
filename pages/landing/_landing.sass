@@ -1,0 +1,472 @@
+/** первая секция **/
+.first-section
+  background: radial-gradient(71.89% 152.21% at 40.1% 50%, #B5E6FF 0%, #59C3FB 100%)
+.first-section__wrap
+  background-image: url(../../assets/images/landing/header-bg.png)
+  background-repeat: no-repeat
+  background-position: 50% 50%
+.watch-animals
+  max-width: 570px
+  padding-bottom: 137px
+.title
+  font-weight: 900
+  font-size: 70px
+  line-height: 120%
+  letter-spacing: 0.03em
+  margin-bottom: 50px
+  +scene
+.btn
+  display: flex
+  align-items: center
+  background-color: $btn-color
+  border-radius: 30px
+  padding: 15px 87.5px
+  font-size: 18px
+  line-height: 21px
+  border: none
+  &__text
+    margin: 0
+    margin-left: 6px
+  &:hover
+    background-color: $btn-hover
+  &:focus
+    outline: none
+  &:active
+    background-color: $btn-active
+
+  /** How it works **/
+.second-section
+  background-image: url(../../assets/images/landing/how-it-work-bg.png)
+  background-repeat: no-repeat
+  background-position: 50% 40%
+  background-size: contain 74%
+  padding-top: 100px
+  padding-bottom: 100px
+.how-it-work
+  display: flex
+  flex-direction: column
+  align-items: center
+  max-width: 1410px
+  width: 100%
+.animal-list-wrapper
+  display: flex
+  width: 100%
+  justify-content: center
+.animals-list
+  display: flex
+  align-items: center
+  margin: 0
+  padding: 0
+  list-style: none
+  margin-bottom: 80px
+  &__item
+    transition: all .3s ease-in
+    &:nth-child(-n+2)
+      margin-right: -25px
+    &:nth-child(n+4)
+      margin-left: -25px
+    &:nth-child(3)
+      z-index: 2
+    &:nth-child(4)
+      z-index: 1
+.list-image
+  width: 250px
+  height: 350px
+  &-middle
+    width: 300px
+    height: 400px
+  &-big
+    width: 350px
+    height: 450px
+.section-description
+  margin: 0
+  font-size: 16px
+  line-height: 130%
+  text-align: center
+  width: 81%
+
+/** Pets in zoo **/
+.pets-in-zoo
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 100px 0 100px
+.slider-wrapper
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin-bottom: 50px
+  width: 105%
+  &.feedback
+    width: 100%
+.item
+  display: none
+  position: relative
+  animation: 0.5s ease-in-out
+.item__active
+  display: flex
+.slider
+  display: flex
+  align-items: center
+  justify-content: space-between
+  flex-wrap: wrap
+  margin: 0 20px
+  &-container
+    overflow: hidden
+    width: 85%
+    position: relative
+    &:hover
+      overflow: visible
+  &-link
+    text-decoration: none
+    &-text
+      position: absolute
+      width: 100%
+      text-align: center
+      top: 15px
+      left: 0
+      color: #ffffff
+      transition: 0.5s
+  &-item
+    position: relative
+    &:nth-child(-n+4)
+      margin-bottom: 30px
+  &-image
+    width: 233px
+    height: 300px
+    transition: 0.5s
+  .slider-link:hover img
+    transform: scale(1.1)
+.next
+  display: flex
+  position: absolute
+  top: 0
+  width: 100%
+.slider-link:hover p
+  font-size: 20px
+  transform: translateY(-15px)
+.arrow-left
+  background-image: url(../../assets/icons/arrow-left.svg)
+  background-repeat: no-repeat
+  background-position: center center
+  background-color: #FFE68E
+  border-radius: 50%
+  height: 63px
+  width: 63px
+  margin-right: 21px
+.arrow-right
+  background-image: url(../../assets/icons/arrow-right.svg)
+  background-repeat: no-repeat
+  background-position: 50% 50%
+  background-color: #FFE68E
+  border-radius: 50%
+  height: 63px
+  width: 63px
+  margin-left: 21px
+.arrows
+  &:hover
+    background-color: #f5d564
+    cursor: pointer
+.btn-choose
+  margin: auto
+  padding: 15px 60px
+
+/** Анимации для слайдера **/
+.to-left
+  animation-name: left
+.to-right
+  animation-name: right
+  animation-direction: reverse
+.from-left
+  animation-name: left
+  animation-direction: reverse
+.from-right
+  animation-name: right
+
+@keyframes left
+  from
+    left: 0
+  to
+    left: -100%
+
+@keyframes right
+  from
+    left: 100%
+  to
+    left: 0
+
+/** Pay and feed **/
+.fourth-section
+  padding: 100px 0 100px
+.instruction
+  background-image: url(../../assets/icons/Arrow-pay-feed.svg)
+  background-repeat: no-repeat
+  background-position: 50% 55%
+  background-size: 58%
+  display: flex
+  align-items: center
+  justify-content: space-around
+  &-item
+    background-image: url(../../assets/icons/pay-bg.svg)
+    background-repeat: no-repeat
+    background-position: 50% 32%
+    width: 320px
+    height: 276px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+  &-text
+    text-align: center
+    margin: 0
+    font-size: 16px
+    line-height: 19px
+.img-wrapper
+  display: flex
+  align-items: center
+  height: 100%
+/** Testimonials **/
+.fifth-section
+  padding: 100px 0 100px
+.slider-feedback
+  display: flex
+  align-items: center
+  justify-content: space-between
+  width: 85%
+  &-item
+    height: 369px
+    width: 233px
+    background-color: #A7E1FF
+.caption
+  display: flex
+  align-items: center
+  padding: 22px 0 18px 20px
+  &-img
+    margin-right: 10px
+.name-text
+  margin-bottom: 4px
+  font-weight: 500
+  font-size: 16px
+  line-height: 120%
+.donat
+  background-image: url(../../assets/icons/money.svg)
+  background-repeat: no-repeat
+  background-position: left center
+  padding-left: 15px
+  font-weight: 500
+  font-size: 12px
+  line-height: 120%
+.feedback-text
+  padding: 0 20px 30px
+
+/** 1200px **/
+@media (max-width: 1200px)
+  .first-section__wrap
+    background-size: cover
+  .animals-list__item
+    &:nth-child(-n+2)
+      margin-right: -75px
+    &:nth-child(n+4)
+      margin-left: -75px
+@media (max-width: 1150px)
+  .slider
+    &-item
+      width: 187px
+    &-image
+      width: 100%
+      object-fit: cover
+    &-feedback
+      width: 81%
+      &-item
+        height: 429px
+        width: 187px
+@media (max-width: 1050px)
+  .slider
+    width: 76%
+    &-item
+      &:nth-child(4n)
+        display: none
+    &-feedback-item
+      &:nth-child(4)
+        display: none
+
+@media (max-width: 960px)
+  .watch-animals
+    max-width: 414px
+  .title
+    font-weight: 900
+    font-size: 50px
+    line-height: 120%
+    letter-spacing: 0.03em
+  .instruction
+    &-item
+      width: 263px
+      height: 295px
+      background-size: 80%
+      background-position: 50% 20%
+    &-text
+      width: 75%
+  .img-wrapper
+    height: 80%
+@media (max-width: 855px)
+  .first-section__wrap
+    background-position: 70% 50%
+  .header
+    margin-bottom: 70px
+    justify-content: space-around
+  .btn
+    padding: 15px 64.5px
+  .watch-animals
+    padding-bottom: 275px
+  .fourth-section
+    background-image: url(../../assets/icons/Arrow-pay-feed-tablet.svg)
+    background-repeat: no-repeat
+    background-position: 150% 38%
+    background-size: 86%
+  .instruction
+    flex-wrap: wrap
+    background: none
+  .arrows-adaptive
+    display: block
+  .slider-wrapper
+    flex-direction: column
+  .slider
+    width: 95%
+    margin-bottom: 30px
+    &-feedback
+      margin-bottom: 30px
+      width: 95%
+  .arrows-adaptive
+    display: flex
+  .arrow
+    &-left
+      margin-right: 10px
+    &-right
+      margin-left: 10px
+@media (max-width: 640px)
+  .header
+    margin-bottom: 78px
+  .first-section__wrap
+    background-image: url(../../assets/images/landing/tablet-bg.png)
+    background-repeat: no-repeat
+  .second-section
+    background-position: 50% 33%
+  .section-description
+    width: 91%
+  .animals-list
+    margin-bottom: 71px
+  .slider
+    width: 100%
+    &-feedback
+      width: 100%
+  .btn-choose
+    padding: 15px 50px
+  .fifth-section
+    padding-top: 109px
+  .caption-name
+    align-self: flex-start
+  .fourth-section
+    background-position: 264% 37%
+    background-size: 93%
+@media (max-width: 630px)
+  .header
+    justify-content: flex-start
+  .slider-item
+    &:nth-child(5)
+      display: none
+    &:nth-child(7)
+      display: none
+    &:nth-child(3)
+      margin-bottom: 0
+  .slider-feedback
+    flex-direction: column
+    &-item
+      height: 100%
+      width: 100%
+      &:first-child
+        margin-bottom: 20px
+      &:nth-child(3)
+
+        display: none
+@media (max-width: 571px)
+  .fourth-section
+    background: none
+  .instruction
+    background-image: url(../../assets/icons/arrow-pay-feed-mobile.svg)
+    background-repeat: no-repeat
+    background-position: 50% 53%
+    &-item:nth-child(-n+2)
+      margin-bottom: 80px
+@media (max-width: 420px)
+  .second-section
+    background-position: 50% 27%
+  .animal-list-wrapper
+    height: 529px
+  .animals-list
+    position: relative
+    &__item
+      position: absolute
+      border: 1px #ffffff solid
+      &:nth-child(5)
+        display: none
+  .animal-list
+    &__eagle
+      top: 37px
+      left: -6px
+      width: 140px
+      height: 215px
+      z-index: 2
+    &__tiger
+      top: 0px
+      left: -145px
+      width: 160px
+      height: 215px
+    &__panda
+      top: 201px
+      left: -127px
+      width: 140px
+      height: 215px
+    &__monkey
+      top: 237px
+      left: 67px
+      width: 160px
+      height: 215px
+  .list-image
+    &__eagle
+      width: 100%
+      height: 100%
+      object-fit: cover
+    &__panda
+      width: 100%
+      height: 100%
+      object-fit: cover
+    &__tiger
+      width: 100%
+      height: 100%
+      object-fit: cover
+    &__monkey
+      width: 100%
+      height: 100%
+      object-fit: cover
+  .slider
+    &-item
+      width: 140px
+    &-image
+      width: 100%
+      object-fit: cover
+@media (max-width: 330px)
+  .first-section__wrap
+    background-position: 30% 50%
+  .watch-animals
+    padding-bottom: 149px
+  .btn
+    &-play
+      padding: 15px 81px
+    &-choose
+      padding: 15px 61.4px
+    &-feedback
+      padding: 15px 50px
+  .section-description
+    width: 100%
+  .fifth-section
+    padding-top: 100px

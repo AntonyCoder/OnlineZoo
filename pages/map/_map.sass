@@ -1,0 +1,290 @@
+.header-map
+  background-color: $map-bg
+.map-header
+  display: flex
+  align-items: center
+  padding-top: 12px
+.header-wrapper
+  max-width: 1160px
+  margin: auto
+  position: relative
+.container-map
+  z-index: 10
+  background-color: $map-bg
+  position: relative
+/** Map **/
+#wrapper
+  max-height: 945px
+  // width: 100vw
+  max-width: 1160px
+  margin: auto
+.map
+  background-color: $map-bg
+  position: relative
+  padding-top: 100px
+  padding-bottom: 100px
+  height: 945px
+  &-wrapper
+    position: relative
+    display: flex
+    justify-content: center
+    z-index: 1
+    width: 100%
+  &-bg
+    top: 0
+    left: 0
+    width: 100%
+    max-width: 3060px
+    min-width: 1160px
+.map-zoom
+  position: absolute
+  z-index: 2
+  width: 32px
+  height: 80px
+  bottom: 100px
+  right: 20px
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25))
+.minus-btn
+  background-image: url(../../assets/images/map/minus.svg)
+  background-repeat: no-repeat
+  background-position: center center
+  height: 40px
+  width: 100%
+  border: none
+  background-color: #ffffff
+  border-bottom: 1px solid #000000
+  border-top-left-radius: 5px
+  border-top-right-radius: 5px
+.plus-btn
+  background-image: url(../../assets/images/map/plus.svg)
+  background-repeat: no-repeat
+  background-position: center center
+  height: 40px
+  width: 100%
+  border: none
+  background-color: #ffffff
+  border-bottom-left-radius: 5px
+  border-bottom-right-radius: 5px
+.zoom-button
+  display: block
+  cursor: pointer
+  &:focus
+    outline: none
+.animal-name
+  font-size: 16px
+  line-height: 19px
+  text-transform: uppercase
+  margin-left: 8px
+  &-eagle
+    margin: 0
+    margin-right: 8px
+  &-panda
+    max-width: 52px
+    text-align: center
+.animal-image
+  border: 2px solid #FFFFFF
+  border-radius: 50%
+  width: 64px
+.animals
+  display: flex
+  align-items: center
+  &:hover
+    .animal-image
+      border: 4px solid $btn-color
+.map
+  &-eagle
+    position: absolute
+    top: 52%
+    left: 1.9%
+    // left: calc(50% - 121px/2 - 497.5px)
+    // top: calc(50% - 64px/2 + 46.5px)
+    &:hover::before
+      visibility: visible
+      overflow: visible
+    &::before
+      content: "EAGLE,\0a California, USA"
+      position: absolute
+      top: 50%
+      right: 3.5%
+      transform: translateY(-50%)
+      width: 114px
+      padding: 4px
+      white-space: pre
+      line-height: 1.2
+      text-align: center
+      background: $btn-color
+      visibility: hidden
+      overflow: hidden
+      z-index: 1
+    &:hover::after
+      visibility: visible
+      overflow: visible
+    &::after
+      content: ''
+      position: absolute
+      top: 50%
+      left: 96.4%
+      transform: translateY(-50%)
+      border: 4px solid transparent
+      border-left: 10px solid $btn-color
+      visibility: hidden
+      overflow: hidden
+  &-alligator
+    position: absolute
+    top: 51.5%
+    left: 26%
+    // left: calc(50% - 158px/2 - 198.5px)
+    // top: calc(50% - 96px/2 + 60px)
+    &:hover::before
+      visibility: visible
+      overflow: visible
+    &::before
+      content: "ALLIGATOR,\0a Florida, USA"
+      position: absolute
+      top: 50%
+      right: 23.7%
+      transform: translateY(-50%)
+      width: 102px
+      padding: 4px
+      white-space: pre
+      line-height: 1.2
+      text-align: center
+      background: $btn-color
+      visibility: hidden
+      overflow: hidden
+      z-index: 1
+    &:hover::after
+      visibility: visible
+      overflow: visible
+    &::after
+      content: ''
+      position: absolute
+      top: 50%
+      left: 24.8%
+      transform: translateY(-50%)
+      border: 4px solid transparent
+      border-right: 10px solid $btn-color
+      visibility: hidden
+      overflow: hidden
+  &-gorilla
+    position: absolute
+    top: 65.5%
+    left: 56.4%
+    // left: calc(50% - 136px/2 + 143px)
+    // top: calc(50% - 64px/2 + 147.5px)
+    &:hover::before
+      visibility: visible
+      overflow: visible
+    &::before
+      content: "GORILLA,\0a Eastern DRC"
+      position: absolute
+      top: 50%
+      right: 24.1%
+      transform: translateY(-50%)
+      min-width: 102px
+      padding: 4px
+      white-space: pre
+      line-height: 1.2
+      text-align: center
+      background: $btn-color
+      visibility: hidden
+      overflow: hidden
+      z-index: 1
+    &:hover::after
+      visibility: visible
+      overflow: visible
+    &::after
+      content: ''
+      position: absolute
+      top: 50%
+      left: 24.5%
+      transform: translateY(-50%)
+      border: 4px solid transparent
+      border-right: 10px solid $btn-color
+      visibility: hidden
+      overflow: hidden
+  &-panda
+    position: absolute
+    top: 49.6%
+    left: 79.5%
+    // left: calc(50% - 124px/2 + 404px)
+    // top: calc(50% - 64px/2 + 29.5px)
+    &:hover::before
+      visibility: visible
+      overflow: visible
+    &::before
+      content: "PANDA,\0a China"
+      position: absolute
+      top: 50%
+      right: 23.9%
+      transform: translateY(-50%)
+      min-width: 102px
+      padding: 4px
+      white-space: pre
+      line-height: 1.2
+      text-align: center
+      background: $btn-color
+      visibility: hidden
+      overflow: hidden
+      z-index: 1
+    &:hover::after
+      visibility: visible
+      overflow: visible
+    &::after
+      content: ''
+      position: absolute
+      top: 50%
+      left: 24.6%
+      transform: translateY(-50%)
+      border: 4px solid transparent
+      border-right: 10px solid $btn-color
+      visibility: hidden
+      overflow: hidden
+  &-country
+    margin: 0
+    font-weight: normal
+    font-size: 16px
+    line-height: 19px
+    text-align: center
+    &-usa
+      position: absolute
+      top: 50.6%
+      left: 17%
+      // left: calc(50% - 31px/2 - 363.5px)
+      // top: calc(50% - 19px/2 + 14px)
+    &-drc
+      position: absolute
+      top: 70.2%
+      left: 44.1%
+      // left: calc(50% - 61px/2 - 38.5px)
+      // top: calc(50% - 42px/2 + 171.5px)
+      max-width: 61px
+    &-china
+      position: absolute
+      top: 52.5%
+      left: 71.8%
+      // left: calc(50% - 41px/2 + 273.5px)
+      // top: calc(50% - 19px/2 + 28px)
+/** 1200px **/
+
+@media (max-width: 1150px)
+  .map-eagle
+    &:hover .map-eagle-info-hidden
+      visibility: visible
+      overflow: visible
+  .map-alligator
+    &:hover .map-alligator-info-hidden
+      visibility: visible
+      overflow: visible
+  .map-gorilla
+    &::after
+      left: 24.2%
+    &:hover .map-gorilla-info-hidden
+      visibility: visible
+      overflow: visible
+  .map-panda
+    &::after
+      left: 24.3%
+    &:hover .map-panda-info-hidden
+      visibility: visible
+      overflow: visible

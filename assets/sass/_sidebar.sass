@@ -1,0 +1,258 @@
+/** Sidebar **/
+main
+  position: relative
+.sidebar
+  z-index: 100
+  position: fixed
+  top: 280px
+  left: 0
+  background-image: url(../../assets/images/panda/sidebar-bg.svg)
+  background-repeat: no-repeat
+  background-position: center left
+  background-size: cover
+  transition-duration: 0.3s
+  &-list
+    padding: 13px 27px 13px 20px
+    margin: 0
+    &-item
+      list-style: none
+      margin-bottom: 7px
+      &:hover .sidebar-image
+        border: 4px solid $btn-color
+      &-active
+        pointer-events: none
+      &:last-child
+        display: flex
+        align-items: center
+        justify-content: center
+        background: $btn-color
+        width: 64px
+        height: 64px
+        border-radius: 50%
+        margin: 0
+        border: 2px solid #ffffff
+        &:hover
+          border: 4px solid $btn-color
+  &-image
+    border: 2px solid #FFFFFF
+    border-radius: 50%
+    width: 64px
+    &-active
+      border: 4px solid $btn-color
+      cursor: default
+  &-alligator
+    &:hover::before
+      visibility: visible
+      overflow: visible
+    &::before
+      content: "ALLIGATOR,\0a Florida, USA"
+      position: absolute
+      top: 12%
+      right: -82%
+      transform: translateY(-50%)
+      width: 102px
+      padding: 4px
+      white-space: pre
+      line-height: 1.2
+      text-align: center
+      background: $btn-color
+      visibility: hidden
+      overflow: hidden
+      z-index: 1
+    &:hover::after
+      visibility: visible
+      overflow: visible
+    &::after
+      content: ''
+      position: absolute
+      top: 12%
+      left: 71.9%
+      transform: translateY(-50%)
+      border: 4px solid transparent
+      border-right: 10px solid $btn-color
+      visibility: hidden
+      overflow: hidden
+  &-panda
+    &:hover::before
+      visibility: visible
+      overflow: visible
+    &::before
+      content: "PANDA,\0a China"
+      position: absolute
+      top: 31.1%
+      right: -83%
+      transform: translateY(-50%)
+      min-width: 102px
+      padding: 4px
+      white-space: pre
+      line-height: 1.2
+      text-align: center
+      background: $btn-color
+      visibility: hidden
+      overflow: hidden
+      z-index: 1
+    &:hover::after
+      visibility: visible
+      overflow: visible
+    &::after
+      content: ''
+      position: absolute
+      top: 31.2%
+      left: 72%
+      transform: translateY(-50%)
+      border: 4px solid transparent
+      border-right: 10px solid $btn-color
+      visibility: hidden
+      overflow: hidden
+  &-eagle
+    &:hover::before
+      visibility: visible
+      overflow: visible
+    &::before
+      content: "EAGLE,\0a California, USA"
+      position: absolute
+      top: 49.7%
+      right: -93.8%
+      transform: translateY(-50%)
+      width: 114px
+      padding: 4px
+      white-space: pre
+      line-height: 1.2
+      text-align: center
+      background: $btn-color
+      visibility: hidden
+      overflow: hidden
+      z-index: 1
+    &:hover::after
+      visibility: visible
+      overflow: visible
+    &::after
+      content: ''
+      position: absolute
+      top: 49.8%
+      left: 71.7%
+      transform: translateY(-50%)
+      border: 4px solid transparent
+      border-right: 10px solid $btn-color
+      visibility: hidden
+      overflow: hidden
+  &-gorilla
+    &:hover::before
+      visibility: visible
+      overflow: visible
+    &::before
+      content: "GORILLA,\0a Eastern DRC"
+      position: absolute
+      top: 69.2%
+      right: -82.9%
+      transform: translateY(-50%)
+      min-width: 102px
+      padding: 4px
+      white-space: pre
+      line-height: 1.2
+      text-align: center
+      background: $btn-color
+      visibility: hidden
+      overflow: hidden
+      z-index: 1
+    &:hover::after
+      visibility: visible
+      overflow: visible
+    &::after
+      content: ''
+      position: absolute
+      top: 69.2%
+      left: 71.7%
+      transform: translateY(-50%)
+      border: 4px solid transparent
+      border-right: 10px solid $btn-color
+      visibility: hidden
+      overflow: hidden
+.sidebar-info-hidden
+  display: none
+@media (max-width: 1200px)
+  .sidebar
+    transform: translateX(-100%)
+    transition-duration: 0.5s
+    z-index: 3
+  .sidebar-active
+    transform: translateX(0%)
+  .sidebar-alligator
+    &:hover .zoos-alligator-hidden
+      display: flex
+  .sidebar-panda
+    &:hover .zoos-panda-hidden
+      display: flex
+  .sidebar-eagle
+    &:hover .zoos-eagle-hidden
+      display: flex
+  .sidebar-gorilla
+    &:hover .zoos-gorilla-hidden
+      display: flex
+  .sidebar-info-hidden
+    position: absolute
+    margin-left: 0 !important
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    background-color: $btn-color
+    width: 169px
+    height: 100px
+    z-index: 1
+    display: none
+  .zoos
+    &-alligator-hidden
+      top: 0%
+      left: 83%
+    &-eagle-hidden
+      top: 38%
+      left: 83%
+    &-gorilla-hidden
+      top: 57%
+      left: 83%
+    &-panda-hidden
+      top: 18.5%
+      left: 83%
+@media (max-width: 420px)
+  .sidebar
+    background-size: contain
+    &-panda-picture
+      display: none !important
+    &-list
+      padding-left: 12px
+    &-alligator
+      &::before
+        content: ''
+        background: none
+      &::after
+        top: 13.9%
+        left: 69.6%
+    &-eagle
+      &::before
+        content: ''
+        background: none
+      &::after
+        top: 59.8%
+        left: 69.7%
+    &-gorilla
+      &::before
+        content: ''
+        background: none
+      &::after
+        top: 83.2%
+        left: 69.7%
+    &-panda
+      &::before
+        content: ''
+        background: none
+      &::after
+        top: 37.2%
+        left: 69%
+  .zoos-eagle-hidden
+    top: 44.5%
+  .zoos-gorilla-hidden
+    top: 68%
+  .zoos-panda-hidden
+    top: 21.9%
+    left: 81.9%

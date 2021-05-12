@@ -1,0 +1,161 @@
+.header-animal
+  display: flex
+  align-items: center
+  padding-top: 12px
+  margin-bottom: 80px
+.sidebar-btn,
+.sidebar-btn__close
+  display: none
+  position: fixed
+  width: 45px
+  height: 45px
+  background-color: $btn-click
+  background-image: url(../../assets/icons/arrow-left.svg)
+  background-repeat: no-repeat
+  background-position: 50% 50%
+  background-size: 22%
+  transform: rotate(180deg)
+  border-radius: 50%
+  border: none
+  &:hover
+    cursor: pointer
+    background-color: $footer-color
+.animal
+  &-info
+    font-weight: normal
+    font-size: 16px
+    line-height: 19px
+    padding-bottom: 100px
+    &-text
+      transition: 0.5s
+      transition-delay: 0.2s
+  &-video
+    margin-bottom: 30px
+    position: relative
+    &__cover
+      position: absolute
+      width: 275px
+      height: 155px
+  &-video__big
+    margin-bottom: 20px
+    position: relative
+  &-live1
+    height: 653px
+    width: 1160px
+  &-live2
+    width: 275px
+    height: 155px
+  &-video-small
+    display: flex
+    justify-content: space-between
+  &-description
+    width: 100%
+    background-color: $map-bg
+    display: flex
+    align-items: center
+    padding: 20px
+    margin-bottom: 20px
+    &-text
+      flex-basis: 50%
+      &:first-child
+        margin-right: 5%
+  &-full-info
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    justify-content: space-between
+    &-wrapper
+      max-width: 87%
+    &-item
+      display: flex
+      align-items: center
+      justify-content: space-between
+      flex-basis: 50%
+      height: 142px
+      background-color: $map-bg
+      padding: 20px
+      max-width: 49%
+      transition: 0.5s
+      &:nth-child(-n+2)
+        margin-bottom: 20px
+  &-info-title
+    text-transform: uppercase
+    margin: 0
+    margin-bottom: 7px
+    font-weight: normal
+  &-info-up_btn
+    width: 45px
+    height: 45px
+    background-color: $btn-click
+    background-image: url(../../assets/icons/arrow-left.svg)
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    background-size: 22%
+    transform: rotate(90deg)
+    border-radius: 50%
+    border: none
+    transition: 0.5s
+    &:hover
+      cursor: pointer
+      background-color: $footer-color
+.btn-feed
+  display: none
+@media (max-width: 1200px)
+  .sidebar-btn
+    display: block
+    z-index: 2
+    transition-duration: 0.5s
+  .sidebar-btn__active
+    transform: translateX(200%)
+@media (max-width: 1150px)
+  .animal
+    &-live1
+      width: 100%
+      height: 53vw
+    &-live2
+      width: 290px
+      height: 167px
+    &-video
+      &__cover
+        width: 290px
+        height: 167px
+      &-small
+        flex-wrap: wrap
+      &__item
+        display: flex
+        justify-content: center
+        flex-basis: 49%
+        &:nth-child(-n+2)
+          margin-bottom: 20px
+    &-description
+      flex-direction: column
+      justify-content: center
+      align-items: flex-start
+      &-text
+        &:first-child
+          margin-bottom: 10px
+    &-full-info-item
+      max-width: 100%
+      flex-basis: 100%
+      &:nth-child(-n+3)
+        margin-bottom: 20px
+@media (max-width: 630px)
+  .animal-full-info
+    &-item
+      height: 100%
+    &-wrapper
+      width: 80%
+  .animal-live2
+    height: 100%
+    width: 100%
+@media (max-width: 420px)
+  .animal-video__item
+    width: 140px
+    height: 82px
+  .animal-live2
+    width: 140px
+    height: 82px
+  .btn-feed
+    display: block
+    padding: 15px 125px
+    margin: 0 auto 20px

@@ -1,0 +1,62 @@
+.pop-up__active
+  display: block !important
+.pop-up
+  &__feedback
+    background-color: #ffffff
+    z-index: 20
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    display: none
+    width: 630px
+    height: 436px
+    &-wrap
+      position: relative
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-between
+      padding: 50px 80px
+    &-btn
+      padding: 9.5px 60px !important
+  &-btn__close
+    position: absolute
+    top: 15px
+    right: 15px
+    background-image: url(../../assets/icons/close.svg)
+    background-repeat: no-repeat
+    width: 27px
+    height: 27px
+    border: none
+    background-color: #ffffff
+    &:hover
+      cursor: pointer
+.input
+  width: 100%
+  height: 40px
+  background: $input-color
+  border: 1px solid #9CA498
+  padding: 10px
+  &-name, &-email
+    margin-bottom: 8px
+  &-text
+    max-height: 180px
+    max-width: 470px
+    height: 180px
+    width: 470px
+    margin-bottom: 20px
+  &:focus
+    border: 1px solid #9CA498
+    outline: none
+.modal-overlay
+  z-index: 10
+  display: none
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: #6f6f6f53
+.modal-overlay__active
+  display: block

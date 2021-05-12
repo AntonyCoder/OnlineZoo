@@ -1,0 +1,34 @@
+.header
+  display: flex
+  align-items: center
+  padding-top: 12px
+  margin-bottom: 130px
+  position: relative
+.nav
+  font-weight: 500
+  font-size: 18px
+  line-height: 21px
+  width: 409px
+  margin-left: 5%
+  &-list
+    margin: 0
+    padding: 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__item
+      list-style: none
+      &-active
+        text-shadow: $btn-color 1px 1px 0, $btn-color -1px -1px 0, $btn-color -1px 1px 0, $btn-color 1px -1px 0
+    &__link
+      color: $main-color
+      text-decoration: none
+      &-active
+        cursor: default
+        color: #000000 !important
+      &:hover
+        text-shadow: $btn-color 1px 1px 0, $btn-color -1px -1px 0, $btn-color -1px 1px 0, $btn-color 1px -1px 0
+        color: #000000 !important
+@media (max-width: 630px)
+  .nav
+    display: none

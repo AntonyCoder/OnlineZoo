@@ -1,0 +1,62 @@
+*
+  box-sizing: border-box
+body
+  color: #000000
+  font-family: 'Roboto', sans-serif
+  overflow-x: hidden
+body.notScroll
+  overflow: hidden
+main
+  overflow: hidden
+  position: relative
+.container
+  max-width: 1160px
+  margin: auto
+  position: relative
+.section-title
+  margin: 0
+  font-weight: 500
+  font-size: 40px
+  line-height: 47px
+  text-align: center
+  margin-bottom: 80px
+p
+  margin: 0
+h1
+  position: absolute
+  width: 1px
+  height: 1px
+  overflow: hidden
+  visibility: hidden
+  padding: 0
+  clip: rect(0 0 0 0)
+.play-link
+  display: flex
+  text-decoration: none
+  color: #000000
+button
+  &:hover
+    cursor: pointer
+  &:focus
+    outline: none
+.arrows-adaptive
+  display: none
+.adaptive-btn
+  display: none !important
+@media (max-width: 1160px)
+  .container
+    width: 95%
+@media (max-width: 855px)
+  .desctop
+    display: none !important
+  .adaptive-btn
+    display: block !important
+    padding: 14px 17px !important
+@media (max-width: 630px)
+  .mobile
+    display: block !important
+  .adaptive-btn
+    display: none !important
+@media (max-width: 330px)
+  .container
+    width: 97%
