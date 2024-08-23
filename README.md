@@ -1,1 +1,1 @@
-https://antonycoder.github.io/OnlineZoo/pages/zoos/panda/panda.html
+https://antonycoder.github.io/OnlineZoo/pages/landing/index.html
